@@ -7,9 +7,13 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
+
+
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
+        android:background="@drawable/searchview"
+        app:queryHint="Search Dictionary"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,9 +24,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Book"
+        android:text="word"
         android:layout_marginTop="10dp"
-        android:textSize="30sp"
+        android:textSize="60sp"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/searchView"/>
 
@@ -35,43 +39,27 @@
         android:textSize="25sp"
         app:layout_constraintTop_toBottomOf="@+id/tvWord"/>
 
-<!--    <androidx.recyclerview.widget.RecyclerView-->
-<!--        android:id="@+id/rvDefinition"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/tvPhonetic"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"/>-->
-
     <TextView
         android:id="@+id/tvDefinition1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
-        android:text="Definition 1"
-        android:textSize="20sp"
+        android:text="Definition"
+        android:layout_marginTop="10dp"
+        android:textSize="25sp"
         android:textColor="@color/black"
+
         app:layout_constraintTop_toBottomOf="@+id/tvPhonetic"/>
 
-<!--    <TextView-->
-<!--        android:id="@+id/tvDefinition2"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        android:text="Definition 2"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:textSize="20sp"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/tvDefinition1"/>-->
-
-<!--    <TextView-->
-<!--        android:id="@+id/tvDefinition3"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        android:text="Definition 3"-->
-<!--        android:textSize="20sp"-->
-<!--        android:textColor="@color/black"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/tvDefinition2"/>-->
-
+        <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDefinition"
+        tools:listitem="@layout/item_definition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+            android:backgroundTint="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/tvDefinition1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
